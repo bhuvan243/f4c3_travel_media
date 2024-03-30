@@ -1,0 +1,8 @@
+$orange: #f05a22;
+$body-bg: #f4f4f4;
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

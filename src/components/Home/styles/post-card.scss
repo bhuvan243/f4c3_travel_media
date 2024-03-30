@@ -1,0 +1,56 @@
+@import "../../../styles/general.scss";
+
+.post-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 28rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "image image image"
+    "image image image"
+    "card-details card-details open-icon-container";
+  .pointer {
+    cursor: pointer;
+  }
+  .image {
+    grid-area: image;
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+  .card-details {
+    grid-area: card-details;
+    p {
+      padding: 0;
+    }
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.4rem;
+    }
+    .description {
+      .read-more {
+        color: $orange;
+        font-weight: 600;
+      }
+    }
+  }
+  .open-icon-container {
+    grid-area: open-icon-container;
+    @include center;
+    .arrow-btn {
+      background-color: $orange;
+      color: white;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+  }
+}
